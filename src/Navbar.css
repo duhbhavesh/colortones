@@ -22,7 +22,7 @@
 }
 
 .slider {
-	width: 300px;
+	width: 200px;
 	margin: 0 10px;
 	display: inline-block;
 }
@@ -37,14 +37,18 @@
 .rc-slider-handle:hover {
 	background-color: cyan;
 	outline: none;
-	border: 2px solid cyan;
+	border: 1px solid #292f31;
 	box-shadow: none;
 	width: 13px;
 	height: 13px;
-	margin-left: -7px;
 	margin-top: -3px;
 }
 
 .rc-slider-rail {
 	height: 8px;
+}
+
+.select-container {
+	margin-left: auto;
+	margin-right: 4rem;
 }
