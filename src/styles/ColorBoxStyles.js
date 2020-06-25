@@ -1,5 +1,5 @@
 import chroma from "chroma-js";
-
+import sizes from "./sizes";
 export default {
 	ColorBox: {
 		width: "20%",
@@ -11,22 +11,31 @@ export default {
 		marginBottom: "-3.5px",
 		"&:hover button": {
 			opacity: 1,
-			transition: "0.6s",
+		},
+		[sizes.down("lg")]: {
+			width: "25%",
+			height: (props) => (props.showingFullPalette ? "25%" : "33.3333%"),
+		},
+		[sizes.down("md")]: {
+			width: "50%",
+			height: (props) => (props.showingFullPalette ? "15%" : "20%"),
+		},
+		[sizes.down("xs")]: {
+			width: "100%",
+			height: (props) => (props.showingFullPalette ? "15%" : "10%"),
 		},
 	},
 	copyText: {
 		color: (props) =>
-			chroma(props.background).luminance() >= 0.55 ? "black" : "white",
+			chroma(props.background).luminance() >= 0.7 ? "black" : "white",
 	},
 	colorName: {
 		color: (props) =>
-			chroma(props.background).luminance() <= 0.4 ? "white" : "black",
+			chroma(props.background).luminance() <= 0.08 ? "white" : "black",
 	},
 	seeMore: {
 		color: (props) =>
-			chroma(props.background).luminance() >= 0.55
-				? "rgba(0,0,0,0.6)"
-				: "white",
+			chroma(props.background).luminance() >= 0.7 ? "rgba(0,0,0,0.6)" : "white",
 		background: "rgba(255, 255, 255, 0.3)",
 		position: "absolute",
 		border: "none",
@@ -107,6 +116,9 @@ export default {
 			marginBottom: "0",
 			padding: "1rem",
 			textTransform: "uppercase",
+			[sizes.down("xs")]: {
+				fontSize: "6rem",
+			},
 		},
 		"& p": {
 			fontSize: "2rem",
