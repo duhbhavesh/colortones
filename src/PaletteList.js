@@ -41,6 +41,12 @@ class PaletteList extends Component {
 		this.props.deletePalette(this.state.deletingId);
 		this.closeDialog();
 	}
+	resetApp() {
+		if (window.confirm("You Sure You Want To Reset?")) {
+			window.localStorage.clear();
+			window.location.reload();
+		}
+	}
 	render() {
 		const { palettes, classes } = this.props;
 		const { openDeleteDialog } = this.state;
@@ -48,8 +54,13 @@ class PaletteList extends Component {
 			<div className={classes.root}>
 				<div className={classes.container}>
 					<nav className={classes.nav}>
-						<h1 className={classes.heading}>Color Tones</h1>
-						<Link to="/palette/new">Create Palette</Link>
+						<h1 className={classes.heading}>colortones 🎨</h1>
+						<div>
+							<Link to="" onClick={this.resetApp}>
+								Reset Palettes
+							</Link>
+							<Link to="/palette/new">Create Palette ➡</Link>
+						</div>
 					</nav>
 					<TransitionGroup className={classes.palettes}>
 						{palettes.map((palette) => (

@@ -108,7 +108,10 @@ class NewPaletteForm extends Component {
 					}}
 				>
 					<div className={classes.drawerHeader}>
-						<IconButton onClick={this.handleDrawerClose}>
+						<IconButton
+							className={classes.iconlft}
+							onClick={this.handleDrawerClose}
+						>
 							<ChevronLeftIcon />
 						</IconButton>
 					</div>

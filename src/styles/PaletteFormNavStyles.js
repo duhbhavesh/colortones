@@ -31,7 +31,15 @@ const styles = (theme) => ({
 		marginLeft: 12,
 		marginRight: 20,
 	},
+	navCreate: {
+		[sizes.down("xs")]: {
+			fontSize: "1rem",
+			marginLeft: "-1rem",
+		},
+	},
 	navBtns: {
+		display: "flex",
+		flexDirectiorn: "row",
 		marginRight: "1rem",
 		"& a": {
 			textDecoration: "none",
@@ -43,6 +51,7 @@ const styles = (theme) => ({
 	button: {
 		margin: "0 0.5rem",
 		[sizes.down("xs")]: {
+			fontSize: "0.7rem",
 			margin: "0 0.2rem",
 			padding: "0.3rem",
 		},

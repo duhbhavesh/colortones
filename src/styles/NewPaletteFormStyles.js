@@ -1,4 +1,5 @@
 import { DRAWER_WIDTH } from "../constants";
+import sizes from "./sizes";
 const drawerWidth = DRAWER_WIDTH;
 
 const styles = (theme) => ({
@@ -23,6 +24,12 @@ const styles = (theme) => ({
 		...theme.mixins.toolbar,
 		justifyContent: "flex-end",
 	},
+	iconlft: {
+		backgroundColor: "#dce2e4",
+		[sizes.down("xs")]: {
+			margin: "2.2rem",
+		},
+	},
 	content: {
 		flexGrow: 1,
 		height: "calc(100vh - 64px)",
@@ -43,16 +50,27 @@ const styles = (theme) => ({
 	container: {
 		width: "90%",
 		height: "100%",
+		fontFamily: "Roboto",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
 		alignItems: "center",
+		[sizes.down("xs")]: {
+			width: "80%",
+			marginTop: "-2rem",
+			marginLeft: "-1.6rem",
+		},
 	},
+
 	buttons: {
 		width: "100%",
+		display: "flex",
+		flexDirection: "row",
 	},
 	button: {
 		width: "50%",
+		margin: "2px",
+		borderRadius: "1rem",
 	},
 });
 

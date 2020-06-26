@@ -36,6 +36,10 @@ export default {
 		[sizes.down("xs")]: {
 			width: "75%",
 		},
+		[sizes.down("sm")]: {
+			width: "80%",
+			maxWidth: "440px",
+		},
 	},
 	nav: {
 		display: "flex",
@@ -43,11 +47,16 @@ export default {
 		justifyContent: "space-between",
 		alignItems: "center",
 		color: "white",
+		[sizes.down("sm")]: {
+			flexDirection: "column",
+			padding: "1rem 0",
+		},
 		"& a": {
 			color: "white",
 			textDecoration: "none",
 			fontWeight: "700",
 			textShadow: "0 0 4px black",
+			marginLeft: "2rem",
 		},
 	},
 	palettes: {

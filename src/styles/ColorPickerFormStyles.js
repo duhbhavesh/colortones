@@ -1,17 +1,19 @@
 const styles = {
 	picker: {
 		width: "100% !important",
-		marginTop: "2rem",
+		alignItems: "center",
+		marginTop: "1rem",
 	},
 	addColor: {
 		width: "100%",
-		padding: "1rem",
+		borderRadius: "1rem",
+		padding: "0.5rem",
 		marginTop: "1rem",
-		fontSize: "2rem",
+		fontSize: "1rem",
 	},
 	colorNameInput: {
 		width: "100%",
-		height: "70px",
+		height: "60px",
 	},
 };
 
