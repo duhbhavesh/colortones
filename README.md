@@ -1,4 +1,4 @@
-# ColorTones
+# ColorTones 🎨
 
 Explore and Create your own Color Palettes for your new awesome projects! Created using React.
 
